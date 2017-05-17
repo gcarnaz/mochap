@@ -12,8 +12,7 @@
     "codeclimate-test-reporter": "^0.0.4"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter",
+    "test": "./node_modules/.bin/mocha --recursive -R xunit test/ > test-reports.xml",
     "coverage":"istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=8138682931f34a05f1829d6c49d791a097e820489d6f98d3d0c0d829c5612585 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info"
   },
