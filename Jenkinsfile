@@ -13,6 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'mocha --recursive -R xunit test/ > test-reports.xml'
                 //sh mocha --recursive -R xunit test/ > test-reports.xml
             }
         }
