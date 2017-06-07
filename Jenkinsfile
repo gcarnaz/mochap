@@ -17,9 +17,10 @@ pipeline {
                 //sh mocha --recursive -R xunit test/ > test-reports.xml
             }
         }
-        stage('Deploy') {
+        stage('Collect Results') {
             steps {
-                echo 'Deploying....'
+                echo 'Collect Results....'
+                junit 'test-reports.xml'
             }
         }
    }
