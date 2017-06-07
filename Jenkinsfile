@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                  sh 'pwd'
-                 sh 'npm install mocha -g'
+                 sh 'sudo npm install mocha -g'
                // sh npm install mocha -g
             }
         }
