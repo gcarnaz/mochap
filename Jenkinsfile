@@ -22,5 +22,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+     }
     }
 }
